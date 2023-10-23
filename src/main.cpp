@@ -74,6 +74,6 @@ int main() {
 
     readStud(&students);
     listStud(&students);
-    
+
     return 0;
 }

@@ -15,6 +15,8 @@ public:
     Student(int number, string name);
     int getNumber() const;
     string getName() const;
+    void addClass(const string& c1);
+    void removeClass(string c1);
 };
 
 
