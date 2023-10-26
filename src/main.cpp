@@ -75,5 +75,8 @@ int main() {
     readStud(&students);
     listStud(&students);
 
+    cout << " --- " << endl;
+    cout << "0 - exit" << endl;
+
     return 0;
 }
