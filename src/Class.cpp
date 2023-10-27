@@ -13,3 +13,11 @@ string Class::getuCode() {
 string Class::getClassCode() {
     return this->classCode;
 }
+
+void Class::setUCode(string code) {
+    this->uCode = code;
+}
+
+void Class::setClassCode(string code) {
+    this->classCode = code;
+}

@@ -2,11 +2,19 @@
 #define PROJETO_1_CLASS_H
 #include <iostream>
 
+using namespace std;
 
 class Class {
+private:
+    string uCode;
+    string classCode;
+
+public:
     Class(string uCode, string classCode);
     string getuCode();
     string getClassCode();
+    void setUCode(string code);
+    void setClassCode(string code);
 };
 
 

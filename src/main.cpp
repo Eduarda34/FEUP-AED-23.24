@@ -1,17 +1,21 @@
+#include <fstream>
+#include <sstream>
 #include <iostream>
 #include "Student.h"
 #include "Class.h"
+#include "Curso.h"
 
+using namespace std;
 
 typedef set<Student*, compStudent> studentsSet;
 typedef set<Class*, compClass> classSet;
-//curso
+typedef set<Curso*, compCurso> cursoSet;
 
-void rClasses(classesSet* classes);
-void rCourses(coursesSet* courses);
+void rClasses(classSet* classes);
+void rCurso(cursoSet* curso);
 void theStudents(studentsSet* students);
+void theClasses(classSet* classes);
 
-using namespace std;
 
 struct compStudent {
     bool operator() (Student* s1, Student* s2) const {
@@ -31,8 +35,7 @@ struct compClass {
 
 
 void readStud(studentsSet* students) {
-    ifstream file ("C:\\Users\\LENOVO\\OneDrive\\Ambiente de Trabalho\\FEUP\\23-24\\AED\\Projeto 1\\schedule\\students_classes.csv")
-
+    ifstream file ("C:\\Users\\LENOVO\\OneDrive\\Ambiente de Trabalho\\FEUP\\23-24\\AED\\Projeto 1\\schedule\\students_classes.csv");
     string line;
     getline(file, line);
 
@@ -61,9 +64,38 @@ void readStud(studentsSet* students) {
     }
 }
 
+
+
 void listStud(studentsSet* students) {
     for (auto const& students : *students) {
         cout << students->getNumber() << " - " << students->getName() << endl;
+    }
+}
+
+void readClasses(classSet* classes) {
+    ifstream file ("C:\\Users\\LENOVO\\OneDrive\\Ambiente de Trabalho\\FEUP\\23-24\\AED\\Projeto 1\\schedule\\classes.csv");
+    string line;
+    getline(file, line);
+
+    while (getline(file, line)) {
+        istringstream  a(line);
+
+        string classCode;
+        string cursoCode;
+        string diaSemana;
+        string startTime;
+        string endTime;
+        string classType;
+
+        getline(a, classCode, ',');
+        getline(a, cursoCode, ',');
+        getline(a, diaSemana, ',');
+        getline(a, startTime, ',');
+        getline(a, endTime, ',');
+        getline(a, classType, ',');
+
+        auto class1 = new Class(cursoCode, classCode);
+        classes->insert(class1);
     }
 }
 
@@ -71,9 +103,11 @@ void listStud(studentsSet* students) {
 int main() {
     studentsSet students;
     classSet classes;
+    cursoSet curso;
 
     readStud(&students);
     listStud(&students);
+    readClasses(&classes);
 
     cout << " --- " << endl;
     cout << "0 - exit" << endl;

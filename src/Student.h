@@ -1,8 +1,7 @@
 #ifndef PROJETO_1_STUDENT_H
 #define PROJETO_1_STUDENT_H
 
-#include <string.h>
-#include <vector>
+
 
 using namespace std;
 
@@ -10,6 +9,8 @@ class Student {
 private:
     int number;
     string name;
+    set<string> classes;
+    set<string> curso;
 
 public:
     Student(int number, string name);
@@ -17,6 +18,10 @@ public:
     string getName() const;
     void addClass(const string& c1);
     void removeClass(string c1);
+    void addCurso(const string& curso);
+    void removeCurso(string curso);
+    set<string> getClasses() const;
+    set<string> getCurso() const;
 };
 
 

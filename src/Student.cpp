@@ -19,5 +19,23 @@ void Student::addClass(const string& c1) {
 }
 
 void Student::removeClass(string c1) {
+    if (this->classes.find(c1) != this->classes.end())
+        this->classes.erase(c1);
+}
 
+void Student::addCurso(const string& curso) {
+    this->curso.insert(curso);
+}
+
+void Student::removeCurso(string curso) {
+    if (this->curso.find(curso) != this->curso.end())
+        this->curso.erase(curso);
+}
+
+set<string> Student::getClasses() const {
+    return this->classes;
+}
+
+set<string> Student::getCurso() const {
+    return this->curso;
 }
