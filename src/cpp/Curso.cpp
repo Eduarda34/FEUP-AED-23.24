@@ -1,4 +1,4 @@
-#include "Curso.h"
+#include "../h/Curso.h"
 #include <iostream>
 
 Curso::Curso(string code) {

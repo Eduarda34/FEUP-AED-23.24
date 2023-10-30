@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Class.h"
+#include "../h/Class.h"
 
 Class::Class(string uCode, string classCode) {
     this->uCode = uCode;

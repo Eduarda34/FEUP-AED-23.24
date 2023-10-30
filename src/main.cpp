@@ -1,9 +1,9 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-#include "Student.h"
-#include "Class.h"
-#include "Curso.h"
+#include "h/Student.h"
+#include "h/Class.h"
+#include "h/Curso.h"
 
 using namespace std;
 

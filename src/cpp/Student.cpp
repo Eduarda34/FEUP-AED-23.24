@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Student.h"
+#include "../h/Student.h"
 
 Student::Student(int number, string name) {
     this->name = name;
