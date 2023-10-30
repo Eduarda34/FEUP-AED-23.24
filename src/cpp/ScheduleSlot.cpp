@@ -1,5 +1,5 @@
 #include "../h/ScheduleSlot.h" //SLOT
-#include <iostream>
+
 
 ScheduleSlot::DaysTimes(string diaSemana, float startTime, float endTime, string type, float duracao) {
     this->diaSemana = diaSemana;

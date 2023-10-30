@@ -1,8 +1,7 @@
 #ifndef PROJETO_1_SLOT_H
 #define PROJETO_1_SLOT_H
-#include <iostream>
+#include <bits/stdc++.h>
 #include "Class.h"
-
 using namespace std;
 
 class ScheduleSlot {

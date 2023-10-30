@@ -1,4 +1,3 @@
-#include <iostream>
 #include "../h/Class.h"
 
 Class::Class(string uCode, string classCode) {

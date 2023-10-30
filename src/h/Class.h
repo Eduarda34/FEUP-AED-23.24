@@ -1,7 +1,6 @@
 #ifndef PROJETO_1_CLASS_H
 #define PROJETO_1_CLASS_H
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 class Class {
