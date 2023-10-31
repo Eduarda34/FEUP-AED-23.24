@@ -1,13 +1,12 @@
 #include "../h/Course.h"
 
-using namespace std;
 
-Course::Course(string code) {
-    this->code = code;
+Course::Course(string codigo) {
+    this->code = codigo;
 }
 
-void Course::setCode(string code) {
-    this->code = code;
+void Course::setCode(string codigo) {
+    this->code = codigo;
 }
 
 string Course::getCode() {
@@ -19,9 +18,11 @@ void Course::addClass(string& c){
 }
 
 void Course::removeClass(string& c){
-    string it;
-    if (find(this->classes.begin(),this->classes.end(), it) != this->classes.end()){
-        this->classes.erase(it);
+    for (size_t i = 0;i < this->classes.size(); i++) {
+        if (this->classes[i] == c ) {
+            this->classes.erase(this->classes.begin()+i);
+            break;
+        }
     }
 }
 
@@ -30,9 +31,11 @@ void Course::addStudent(int student){
 }
 
 void Course::removeStudent(int student){
-    int it;
-    if (find(this->students.begin(),this->students.end(), it) != this->students.end()){
-        this->students.erase(it);
+    for (size_t i = 0;i < this->students.size(); i++) {
+        if (this->students[i] == student ) {
+            this->students.erase(this->students.begin()+i);
+            break;
+        }
     }
 }
 

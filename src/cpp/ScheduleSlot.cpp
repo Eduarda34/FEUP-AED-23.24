@@ -1,7 +1,7 @@
 #include "../h/ScheduleSlot.h" //SLOT
 
 
-ScheduleSlot::DaysTimes(string diaSemana, float startTime, float endTime, string type, float duracao) {
+ScheduleSlot::ScheduleSlot(string diaSemana, float startTime, float endTime, float duracao, string type) {
     this->diaSemana = diaSemana;
     this->startTime = startTime;
     this->endTime = endTime;

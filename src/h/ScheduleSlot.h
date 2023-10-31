@@ -1,7 +1,8 @@
 #ifndef PROJETO_1_SLOT_H
 #define PROJETO_1_SLOT_H
-#include <bits/stdc++.h>
 #include "Class.h"
+#include <string>
+
 using namespace std;
 
 class ScheduleSlot {
@@ -13,7 +14,7 @@ private:
     float duracao;
 
 public:
-    DaysTimes(string diaSemana, float startTime, float endTime, float duracao, string type,);
+    ScheduleSlot(string diaSemana, float startTime, float endTime, float duracao, string type);
     string getDiaSemana();
     float getStartTime();
     float getEndTime();

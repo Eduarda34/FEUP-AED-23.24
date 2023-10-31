@@ -1,4 +1,3 @@
-#include <iostream>
 #include "../h/Student.h"
 
 Student::Student(int number, string name) {
@@ -14,28 +13,36 @@ string Student::getName() const {
     return this->name;
 }
 
-void Student::addClass(const string& c1) {
-    this->classes.insert(c1);
+void Student::addClass(const string& c) {
+    this->classes.push_back(c);
 }
 
-void Student::removeClass(string c1) {
-    if (this->classes.find(c1) != this->classes.end())
-        this->classes.erase(c1);
+void Student::removeClass(string c) {
+    for (size_t i = 0;i < this->classes.size(); i++) {
+        if (this->classes[i] == c ) {
+            this->classes.erase(this->classes.begin()+i);
+            break;
+        }
+    }
 }
 
 void Student::addCurso(const string& curso) {
-    this->curso.insert(curso);
+    this->curso.push_back(curso);
 }
 
 void Student::removeCurso(string curso) {
-    if (this->curso.find(curso) != this->curso.end())
-        this->curso.erase(curso);
+    for (size_t i = 0;i < this->curso.size(); i++) {
+        if (this->curso[i] == curso ) {
+            this->curso.erase(this->curso.begin()+i);
+            break;
+        }
+    }
 }
 
-set<string> Student::getClasses() const {
+vector<string> Student::getClasses() const {
     return this->classes;
 }
 
-set<string> Student::getCurso() const {
+vector<string> Student::getCurso() const {
     return this->curso;
 }

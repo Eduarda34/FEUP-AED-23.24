@@ -1,6 +1,8 @@
 #ifndef PROJETO_1_COURSE_H
 #define PROJETO_1_COURSE_H
-#include <bits/stdc++.h>
+#include <string>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 

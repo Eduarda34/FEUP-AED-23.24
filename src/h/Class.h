@@ -1,6 +1,8 @@
 #ifndef PROJETO_1_CLASS_H
 #define PROJETO_1_CLASS_H
-#include <bits/stdc++.h>
+#include <string>
+
+
 using namespace std;
 
 class Class {
