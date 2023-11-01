@@ -1,6 +1,7 @@
 #ifndef PROJETO_1_CLASS_H
 #define PROJETO_1_CLASS_H
-#include <iostream>
+#include <string>
+
 
 using namespace std;
 

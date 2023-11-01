@@ -1,15 +1,15 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-#include "Student.h"
-#include "Class.h"
-#include "Curso.h"
+#include "h/Student.h"
+#include "h/Class.h"
+#include "h/Course.h"
 
 using namespace std;
 
 typedef set<Student*, compStudent> studentsSet;
 typedef set<Class*, compClass> classSet;
-typedef set<Curso*, compCurso> cursoSet;
+typedef set<Course*, compCurso> cursoSet;
 
 void rClasses(classSet* classes);
 void rCurso(cursoSet* curso);
