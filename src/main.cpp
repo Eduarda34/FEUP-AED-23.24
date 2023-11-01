@@ -25,7 +25,9 @@ struct compStudent {
 
 struct compClass {
     bool operator() (Class* c1, Class* c2) const {
-        return c1->getUCode() < c2->getUCode();
+        if (c1->getCourse() == c2->getCourse())
+            return c1->getCode() < c2->getCode();
+        return c1->getCourse() < c2->getCourse();
     }
 };
 

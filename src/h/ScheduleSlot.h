@@ -2,6 +2,7 @@
 #define PROJETO_1_SLOT_H
 #include "Class.h"
 #include <string>
+#include <bits/stdc++.h>
 
 using namespace std;
 

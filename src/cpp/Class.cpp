@@ -1,22 +1,28 @@
 #include "../h/Class.h"
+#include <utility>
+#include "Student.cpp"
 
-Class::Class(string uCode, string classCode) {
-    this->uCode = uCode;
-    this->classCode = classCode;
+Class::Class(string uCode, string curso) {
+    this->uCode = std::move(uCode);
+    this->curso = std::move(curso);
 }
 
-string Class::getuCode() {
+string Class::getuCode() const {
     return this->uCode;
 }
 
-string Class::getClassCode() {
-    return this->classCode;
+string Class::getCurso() const {
+    return this->curso;
 }
 
 void Class::setUCode(string code) {
     this->uCode = code;
 }
 
-void Class::setClassCode(string code) {
-    this->classCode = code;
+void Class::setCurso(string curso) {
+    this->curso = curso;
+}
+
+void Class::addStudent(const Student& student) {
+    this->students()
 }
