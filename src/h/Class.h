@@ -8,15 +8,14 @@ using namespace std;
 class Class {
 private:
     string uCode;
-    string curso;
+    string classCode;
 
 public:
     Class(string uCode, string classCode);
+    string getuCode();
+    string getClassCode();
     void setUCode(string code);
-    void setCurso(string curso);
-    string getCurso() const;
-
-string getuCode() const;
+    void setClassCode(string code);
 };
 
 
