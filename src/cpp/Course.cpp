@@ -1,15 +1,15 @@
 #include "../h/Course.h"
 
 
-Course::Course(string codigo) {
-    this->code = codigo;
+Course::Course(string cod) {
+    this->code = cod;
 }
 
-void Course::setCode(string codigo) {
-    this->code = codigo;
+void Course::setCode(string cod) {
+    this->code = cod;
 }
 
-string Course::getCode() {
+string Course::getCode() const {
     return this->code;
 }
 
@@ -39,10 +39,10 @@ void Course::removeStudent(int student){
     }
 }
 
-vector<string> Course::getClasses(){
+vector<string> Course::getClasses() const{
     return this->classes;
 }
 
-vector<int> Course::getStudents(){
+vector<int> Course::getStudents() const{
     return this->students;
 }

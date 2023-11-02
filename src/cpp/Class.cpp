@@ -5,7 +5,7 @@ Class::Class(string uCode, string classCode) {
     this->classCode = classCode;
 }
 
-string Class::getuCode() {
+string Class::getUCode() {
     return this->uCode;
 }
 
@@ -19,4 +19,8 @@ void Class::setUCode(string code) {
 
 void Class::setClassCode(string code) {
     this->classCode = code;
+}
+
+bool Class::operator==(const Class& c1) const{
+    return ((this->uCode==c1.uCode) && (this->classCode==c1.classCode));
 }

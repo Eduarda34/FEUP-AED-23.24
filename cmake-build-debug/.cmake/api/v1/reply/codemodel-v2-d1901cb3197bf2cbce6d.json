@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Projeto_1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Projeto_1-Debug-4baacaff888c896c9ca4.json",
+					"jsonFile" : "target-Projeto_1-Debug-f283dd1158005cdee0a7.json",
 					"name" : "Projeto_1",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/LENOVO/OneDrive/Ambiente de Trabalho/FEUP/23-24/AED/Projeto 1/cmake-build-debug",
-		"source" : "C:/Users/LENOVO/OneDrive/Ambiente de Trabalho/FEUP/23-24/AED/Projeto 1"
+		"build" : "C:/Users/metta/FEUP-AED-23.24/cmake-build-debug",
+		"source" : "C:/Users/metta/FEUP-AED-23.24"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 5
 	}
 }

@@ -2,24 +2,28 @@
 #define PROJETO_1_SLOT_H
 #include "Class.h"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
 class ScheduleSlot {
 private:
-    string diaSemana;
+    string weekDay;
     float startTime;
-    float endTime;
     string type;
-    float duracao;
+    float duration;
+    Class* c1;
 
 public:
-    ScheduleSlot(string diaSemana, float startTime, float endTime, float duracao, string type);
-    string getDiaSemana();
+    ScheduleSlot(string weekDay, float startTime, float duration, string type, Class* c1);
+    string getWeekDay();
     float getStartTime();
     float getEndTime();
     float getDuration();
     string getType();
+    bool operator==(const ScheduleSlot& slot) const;
+    Class* getClass();
+    void addClass(Class* c1);
 };
 
 
