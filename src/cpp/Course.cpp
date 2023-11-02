@@ -46,3 +46,11 @@ vector<string> Course::getClasses() const{
 vector<int> Course::getStudents() const{
     return this->students;
 }
+
+void Course::setSchedule(Schedule* sched){
+    this->sched=sched;
+}
+
+Schedule* Course::getSchedule() const{
+    return this->sched;
+}

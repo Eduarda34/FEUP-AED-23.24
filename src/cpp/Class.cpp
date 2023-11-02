@@ -24,3 +24,11 @@ void Class::setClassCode(string code) {
 bool Class::operator==(const Class& c1) const{
     return ((this->uCode==c1.uCode) && (this->classCode==c1.classCode));
 }
+
+ScheduleSlot* Class::getSlot() const{
+    return this->slot;
+}
+
+void Class::setSlot(ScheduleSlot* slot){
+    this->slot = slot;
+}

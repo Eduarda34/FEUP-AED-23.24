@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include "Schedule.h"
 
 using namespace std;
 
@@ -12,6 +13,7 @@ private:
     string name;
     vector<string> classes;
     vector<string> course;
+    Schedule* sched;
 
 public:
     Student(int number, string name);
@@ -23,6 +25,8 @@ public:
     void removeCourse(string course);
     vector<string> getClasses() const;
     vector<string> getCourse() const;
+    Schedule* getSchedule() const;
+    void setSchedule(Schedule* sched);
 };
 
 
