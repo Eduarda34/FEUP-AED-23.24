@@ -13,7 +13,7 @@ string Student::getName() const {
     return this->name;
 }
 
-void Student::addClass(const string& c) {
+void Student::addClass(string& c) {
     this->classes.push_back(c);
 }
 
@@ -26,14 +26,14 @@ void Student::removeClass(string c) {
     }
 }
 
-void Student::addCurso(const string& curso) {
-    this->curso.push_back(curso);
+void Student::addCourse(string& course) {
+    this->course.push_back(course);
 }
 
-void Student::removeCurso(string curso) {
-    for (size_t i = 0;i < this->curso.size(); i++) {
-        if (this->curso[i] == curso ) {
-            this->curso.erase(this->curso.begin()+i);
+void Student::removeCourse(string course) {
+    for (size_t i = 0;i < this->course.size(); i++) {
+        if (this->course[i] == course ) {
+            this->course.erase(this->course.begin()+i);
             break;
         }
     }
@@ -43,6 +43,14 @@ vector<string> Student::getClasses() const {
     return this->classes;
 }
 
-vector<string> Student::getCurso() const {
-    return this->curso;
+vector<string> Student::getCourse() const {
+    return this->course;
+}
+
+Schedule* Student::getSchedule() const{
+    return this->sched;
+}
+
+void Student::setSchedule(Schedule* sched) {
+    this->sched=sched;
 }
