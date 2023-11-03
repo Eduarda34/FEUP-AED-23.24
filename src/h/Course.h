@@ -13,6 +13,7 @@ private:
     vector<string>classes;
     vector<int>students;
     Schedule* sched;
+
 public:
     Course(string cod);
     void setCode(string cod);

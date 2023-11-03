@@ -31,7 +31,7 @@ void Student::addCourse(string& course) {
 }
 
 void Student::removeCourse(string course) {
-    for (size_t i = 0;i < this->course.size(); i++) {
+    for (size_t i = 0; i < this->course.size(); i++) {
         if (this->course[i] == course ) {
             this->course.erase(this->course.begin()+i);
             break;

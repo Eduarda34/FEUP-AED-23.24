@@ -11,6 +11,8 @@ private:
     string uCode;
     string classCode;
     ScheduleSlot* slot;
+    set<int> students;
+    set<Slot> slots;
 
 public:
     Class(string uCode, string classCode);

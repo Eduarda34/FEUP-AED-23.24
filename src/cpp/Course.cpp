@@ -1,6 +1,5 @@
 #include "../h/Course.h"
 
-
 Course::Course(string cod) {
     this->code = cod;
 }
@@ -31,7 +30,7 @@ void Course::addStudent(int student){
 }
 
 void Course::removeStudent(int student){
-    for (size_t i = 0;i < this->students.size(); i++) {
+    for (size_t i = 0; i < this->students.size(); i++) {
         if (this->students[i] == student ) {
             this->students.erase(this->students.begin()+i);
             break;
