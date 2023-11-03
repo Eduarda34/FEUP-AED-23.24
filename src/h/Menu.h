@@ -4,6 +4,9 @@
 #include "Class.h"
 #include "StudentRequest.h"
 #include "Student.h"
+#include <sstream>
+#include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -40,7 +43,12 @@ public:
     void clearScreen();
     void wait();
     void listStud(studentSet* students, int ch1, int ch2, int ch3, int ch4, int ch5, int max, int min, int a);
-    
+    void listClasses(classSet* classes, studentSet* students, int ch1, int ch2, int ch3);
+    void listCourses(cursoSet* courses, studentSet* students, int ch1, int ch2, int ch3);
+    void studFilters(studentSet *students);
+    void classFilters(classSet* classes, studentSet* students);
+    void cursoFilters(cursoSet* courses, studentSet* students);
+    void listEverything(studentSet* students, classSet* classes, cursoSet* courses);
 };
 
 

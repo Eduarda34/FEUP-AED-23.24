@@ -1,8 +1,8 @@
 #ifndef PROJETO_1_CLASS_H
 #define PROJETO_1_CLASS_H
 #include <string>
-#include "ScheduleSlot.h"
-
+#include "../h/ScheduleSlot.h"
+#include "../h/Student.h"
 
 using namespace std;
 
@@ -23,6 +23,7 @@ public:
     bool operator==(const Class& c1) const;
     ScheduleSlot* getSlot() const;
     void setSlot(ScheduleSlot* slot);
+    set<int> getStudents() const;
 };
 
 

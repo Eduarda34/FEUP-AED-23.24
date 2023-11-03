@@ -1,4 +1,6 @@
 #include "../h/Class.h"
+#include <string>
+#include <iostream>
 
 Class::Class(string uCode, string classCode) {
     this->uCode = uCode;
@@ -31,4 +33,8 @@ ScheduleSlot* Class::getSlot() const{
 
 void Class::setSlot(ScheduleSlot* slot){
     this->slot = slot;
+}
+
+set<int> Class::getStudents() const {
+    return this->students;
 }
