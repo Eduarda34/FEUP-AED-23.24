@@ -3,6 +3,7 @@
 #include <string>
 #include "../h/ScheduleSlot.h"
 #include "../h/Student.h"
+#include <set>
 
 using namespace std;
 
@@ -12,7 +13,6 @@ private:
     string classCode;
     ScheduleSlot* slot;
     set<int> students;
-    set<Slot> slots;
 
 public:
     Class(string uCode, string classCode);
@@ -24,6 +24,7 @@ public:
     ScheduleSlot* getSlot() const;
     void setSlot(ScheduleSlot* slot);
     set<int> getStudents() const;
+    void addStudent(Student* student);
 };
 
 

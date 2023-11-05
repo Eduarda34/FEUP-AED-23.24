@@ -6,6 +6,8 @@
 
 using namespace std;
 
+
+
 void Menu::readStud(studentSet* students, classSet* classes, cursoSet* cursos) {
     ifstream file("schedule/students_classes.csv");
     string line;
@@ -40,8 +42,8 @@ void Menu::readStud(studentSet* students, classSet* classes, cursoSet* cursos) {
         (*iterator2)->addClass(make_pair(course, code));
 
         auto cours_e = new Course(course);
-        auto iterator3 = course->find(cours_e);
-        if (iterator3 != course->end()) {
+        auto iterator3 = course.find(cours_e);
+        if (iterator3 != course.end()) {
             (*iterator3)->addStudent(n);
         }
     }
@@ -77,7 +79,7 @@ void Menu::readClass(classSet *classes) {
 
         endTime = starTime + duration;
 
-        (*iterator)->addSlot(ScheduleSlot(day, starTime, endTime, duration, type));
+        (*iterator)->setSlot(ScheduleSlot(day, starTime, endTime, duration, type));
     }
 }
 
@@ -172,7 +174,7 @@ void Menu::listStud(studentSet* students, int ch1, int ch2, int ch3, int ch4, in
 
         if (ch3 == 1) {
             for (const auto& clas_s : student->getClasses())
-                cout << "    " << clas_s.first << " - " << clas_s.second << endl;
+                cout << "    " << clas_s[0] << " - " << clas_s[1] << endl;
         }
     }
 }
@@ -397,11 +399,11 @@ void Menu::listEverything(studentSet* students, classSet* classes, cursoSet* cou
                 break;
 
             case '2':
-                classFilters(classes);
+                classFilters(classes, students);
                 break;
 
             case '3':
-                cursoFilters(courses);
+                cursoFilters(courses, students);
                 break;
 
             case '0':
