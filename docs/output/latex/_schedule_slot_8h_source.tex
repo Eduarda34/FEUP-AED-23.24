@@ -1,0 +1,38 @@
+\doxysection{Schedule\+Slot.\+h}
+\hypertarget{_schedule_slot_8h_source}{}\label{_schedule_slot_8h_source}\index{src/h/ScheduleSlot.h@{src/h/ScheduleSlot.h}}
+\mbox{\hyperlink{_schedule_slot_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PROJETO\_1\_SLOT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PROJETO\_1\_SLOT\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_class_8h}{Class.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_schedule_slot}{ScheduleSlot}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{string}\ weekDay;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ startTime;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{float}\ endTime;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{string}\ type;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ duration;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//Class*\ c1;}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_schedule_slot}{ScheduleSlot}}(\textcolor{keywordtype}{string}\ weekDay,\ \textcolor{keywordtype}{float}\ startTime,\ \textcolor{keywordtype}{float}\ endTime,\ \textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{string}\ type);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_schedule_slot_a6406865ad4b40a9b03bdc939f410caea}{getWeekDay}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_schedule_slot_aca78706afd9db5736677e5841c64962a}{getStartTime}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_schedule_slot_a126768eef07c4464a7b0fd949d4e6a97}{getEndTime}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_schedule_slot_aea628ff43654608b6a3f215233f28a6b}{getDuration}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_schedule_slot_a34241bdcb14f99e4c553619a7d14ca7e}{getType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_schedule_slot_a189723faf8d6e13a0d3c33111d0fa6b7}{compatible}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_schedule_slot}{ScheduleSlot}}\ *slot)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_schedule_slot_a5f6f4d46a5eb9b38323fb570c3d8b3f6}{operator<}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_schedule_slot}{ScheduleSlot}}\&\ slot)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{/*Class*\ getClass();}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ void\ addClass(Class*\ c1);*/}}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,51 @@
+\doxysection{src/h/\+Menu.h File Reference}
+\hypertarget{_menu_8h}{}\label{_menu_8h}\index{src/h/Menu.h@{src/h/Menu.h}}
+{\ttfamily \#include "{}Course.\+h"{}}\newline
+{\ttfamily \#include "{}Class.\+h"{}}\newline
+{\ttfamily \#include "{}Student\+Request.\+h"{}}\newline
+{\ttfamily \#include "{}Student.\+h"{}}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcompare_stud}{compare\+Stud}}
+\item 
+struct \mbox{\hyperlink{structcompare_curso}{compare\+Curso}}
+\item 
+struct \mbox{\hyperlink{structcompare_class}{compare\+Class}}
+\item 
+class \mbox{\hyperlink{class_menu}{Menu}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef set$<$ \mbox{\hyperlink{class_student}{Student}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{structcompare_stud}{compare\+Stud}} $>$ \mbox{\hyperlink{_menu_8h_aaa8d136f9602d110fae22ccc100358f3}{student\+Set}}
+\item 
+typedef set$<$ \mbox{\hyperlink{class_course}{Course}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{structcompare_curso}{compare\+Curso}} $>$ \mbox{\hyperlink{_menu_8h_a1f00537544a5d7d9ae90b31248b734b6}{curso\+Set}}
+\item 
+typedef set$<$ \mbox{\hyperlink{class_class}{Class}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{structcompare_class}{compare\+Class}} $>$ \mbox{\hyperlink{_menu_8h_a7f24e304607d01190531e867207fcd91}{class\+Set}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_menu_8h_a7f24e304607d01190531e867207fcd91}\label{_menu_8h_a7f24e304607d01190531e867207fcd91} 
+\index{Menu.h@{Menu.h}!classSet@{classSet}}
+\index{classSet@{classSet}!Menu.h@{Menu.h}}
+\doxysubsubsection{\texorpdfstring{classSet}{classSet}}
+{\footnotesize\ttfamily typedef set$<$\mbox{\hyperlink{class_class}{Class}}\texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{structcompare_class}{compare\+Class}}$>$ \mbox{\hyperlink{_menu_8h_a7f24e304607d01190531e867207fcd91}{class\+Set}}}
+
+\Hypertarget{_menu_8h_a1f00537544a5d7d9ae90b31248b734b6}\label{_menu_8h_a1f00537544a5d7d9ae90b31248b734b6} 
+\index{Menu.h@{Menu.h}!cursoSet@{cursoSet}}
+\index{cursoSet@{cursoSet}!Menu.h@{Menu.h}}
+\doxysubsubsection{\texorpdfstring{cursoSet}{cursoSet}}
+{\footnotesize\ttfamily typedef set$<$\mbox{\hyperlink{class_course}{Course}}\texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{structcompare_curso}{compare\+Curso}}$>$ \mbox{\hyperlink{_menu_8h_a1f00537544a5d7d9ae90b31248b734b6}{curso\+Set}}}
+
+\Hypertarget{_menu_8h_aaa8d136f9602d110fae22ccc100358f3}\label{_menu_8h_aaa8d136f9602d110fae22ccc100358f3} 
+\index{Menu.h@{Menu.h}!studentSet@{studentSet}}
+\index{studentSet@{studentSet}!Menu.h@{Menu.h}}
+\doxysubsubsection{\texorpdfstring{studentSet}{studentSet}}
+{\footnotesize\ttfamily typedef set$<$\mbox{\hyperlink{class_student}{Student}}\texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{structcompare_stud}{compare\+Stud}}$>$ \mbox{\hyperlink{_menu_8h_aaa8d136f9602d110fae22ccc100358f3}{student\+Set}}}
+

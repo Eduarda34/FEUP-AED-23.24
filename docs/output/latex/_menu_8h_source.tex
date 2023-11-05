@@ -1,0 +1,64 @@
+\doxysection{Menu.\+h}
+\hypertarget{_menu_8h_source}{}\label{_menu_8h_source}\index{src/h/Menu.h@{src/h/Menu.h}}
+\mbox{\hyperlink{_menu_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PROJETO\_1\_MENU\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PROJETO\_1\_MENU\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_course_8h}{Course.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_class_8h}{Class.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_student_request_8h}{StudentRequest.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_student_8h}{Student.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcompare_stud}{compareStud}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structcompare_stud_ad18feae9bf84c4d787d785be448f5b22}{operator()}}(\mbox{\hyperlink{class_student}{Student}}*\ e1,\ \mbox{\hyperlink{class_student}{Student}}*\ e2)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ e1-\/>\mbox{\hyperlink{class_student_ae7b15f60adaf461d6e70079f7854487c}{getNumber}}()\ <\ e2-\/>\mbox{\hyperlink{class_student_ae7b15f60adaf461d6e70079f7854487c}{getNumber}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \}}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcompare_curso}{compareCurso}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structcompare_curso_acfbe787e7815a4c35ca5d2a16d15714a}{operator()}}(\mbox{\hyperlink{class_course}{Course}}*\ u1,\ \mbox{\hyperlink{class_course}{Course}}*\ u2)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ u1-\/>\mbox{\hyperlink{class_course_a67e1d65b0e960e12e2bf1a2969ae6ab2}{getCode}}()\ <\ u2-\/>\mbox{\hyperlink{class_course_a67e1d65b0e960e12e2bf1a2969ae6ab2}{getCode}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcompare_class}{compareClass}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structcompare_class_a1a56b91017b7b51d4e8552bc3d08abe9}{operator()}}(\mbox{\hyperlink{class_class}{Class}}*\ c1,\ \mbox{\hyperlink{class_class}{Class}}*\ c2)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (c1-\/>\mbox{\hyperlink{class_class_a876a547a160251c4b1769b13d36eef24}{getClassCode}}()\ ==\ c2-\/>\mbox{\hyperlink{class_class_a876a547a160251c4b1769b13d36eef24}{getClassCode}}())}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ c1-\/>\mbox{\hyperlink{class_class_a7cb4d6dc1aabaf7f53389315d0c12bc2}{getUCode}}()\ <\ c2-\/>\mbox{\hyperlink{class_class_a7cb4d6dc1aabaf7f53389315d0c12bc2}{getUCode}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ c1-\/>\mbox{\hyperlink{class_class_a876a547a160251c4b1769b13d36eef24}{getClassCode}}()\ <\ c2-\/>\mbox{\hyperlink{class_class_a876a547a160251c4b1769b13d36eef24}{getClassCode}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ set<Student*,\ compareStud>\ \mbox{\hyperlink{_menu_8h_aaa8d136f9602d110fae22ccc100358f3}{studentSet}};}
+\DoxyCodeLine{00036\ \textcolor{keyword}{typedef}\ set<Course*,\ compareCurso>\ \mbox{\hyperlink{_menu_8h_a1f00537544a5d7d9ae90b31248b734b6}{cursoSet}};}
+\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ set<Class*,\ compareClass>\ \mbox{\hyperlink{_menu_8h_a7f24e304607d01190531e867207fcd91}{classSet}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_menu}{Menu}}\ \{}
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a866aca9e7c93236472217ca231f2b736}{readStud}}(\mbox{\hyperlink{_menu_8h_aaa8d136f9602d110fae22ccc100358f3}{studentSet}}*\ students,\ \mbox{\hyperlink{_menu_8h_a7f24e304607d01190531e867207fcd91}{classSet}}*\ classes,\ \mbox{\hyperlink{_menu_8h_a1f00537544a5d7d9ae90b31248b734b6}{cursoSet}}*\ cursos);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a81c06959de953eb431ae1b9528eb9c4b}{readClass}}(\mbox{\hyperlink{_menu_8h_a7f24e304607d01190531e867207fcd91}{classSet}}*\ classes);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a36fbe43aeea77f0e05e45d9c1d8dbf47}{readCursos}}(\mbox{\hyperlink{_menu_8h_a1f00537544a5d7d9ae90b31248b734b6}{cursoSet}}*\ cursos);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_ae3a5edcb580112ec449d12d9eb5a3e7c}{clearScreen}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_ab934c2d5abb4ab56362bd998a4cbce4d}{wait}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_ad8f18531a0d91673d2e35f2814cb60c5}{listStud}}(\mbox{\hyperlink{_menu_8h_aaa8d136f9602d110fae22ccc100358f3}{studentSet}}*\ students,\ \textcolor{keywordtype}{int}\ ch1,\ \textcolor{keywordtype}{int}\ ch2,\ \textcolor{keywordtype}{int}\ ch3,\ \textcolor{keywordtype}{int}\ ch4,\ \textcolor{keywordtype}{int}\ ch5,\ \textcolor{keywordtype}{int}\ max,\ \textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ a);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a3cca2147918b244dd559d056f5e501ae}{listClasses}}(\mbox{\hyperlink{_menu_8h_a7f24e304607d01190531e867207fcd91}{classSet}}*\ classes,\ \mbox{\hyperlink{_menu_8h_aaa8d136f9602d110fae22ccc100358f3}{studentSet}}*\ students,\ \textcolor{keywordtype}{int}\ ch1,\ \textcolor{keywordtype}{int}\ ch2,\ \textcolor{keywordtype}{int}\ ch3);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a3201db96a8bf72eb1409a93969948638}{listCourses}}(\mbox{\hyperlink{_menu_8h_a1f00537544a5d7d9ae90b31248b734b6}{cursoSet}}*\ courses,\ \mbox{\hyperlink{_menu_8h_aaa8d136f9602d110fae22ccc100358f3}{studentSet}}*\ students,\ \textcolor{keywordtype}{int}\ ch1,\ \textcolor{keywordtype}{int}\ ch2,\ \textcolor{keywordtype}{int}\ ch3);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a019a3a97d0ef4a4cf74d6248614de15a}{studFilters}}(\mbox{\hyperlink{_menu_8h_aaa8d136f9602d110fae22ccc100358f3}{studentSet}}\ *students);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a924aaa4a3a6bbbf4ebd79c56b54093d4}{classFilters}}(\mbox{\hyperlink{_menu_8h_a7f24e304607d01190531e867207fcd91}{classSet}}*\ classes,\ \mbox{\hyperlink{_menu_8h_aaa8d136f9602d110fae22ccc100358f3}{studentSet}}*\ students);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_aca77056d03752485d055075f6c74de43}{cursoFilters}}(\mbox{\hyperlink{_menu_8h_a1f00537544a5d7d9ae90b31248b734b6}{cursoSet}}*\ courses,\ \mbox{\hyperlink{_menu_8h_aaa8d136f9602d110fae22ccc100358f3}{studentSet}}*\ students);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a6328bfb57d9033d20386ab0e5e150c15}{listEverything}}(\mbox{\hyperlink{_menu_8h_aaa8d136f9602d110fae22ccc100358f3}{studentSet}}*\ students,\ \mbox{\hyperlink{_menu_8h_a7f24e304607d01190531e867207fcd91}{classSet}}*\ classes,\ \mbox{\hyperlink{_menu_8h_a1f00537544a5d7d9ae90b31248b734b6}{cursoSet}}*\ courses);}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJETO\_1\_MENU\_H}}
+
+\end{DoxyCode}

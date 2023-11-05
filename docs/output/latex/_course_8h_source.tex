@@ -1,0 +1,38 @@
+\doxysection{Course.\+h}
+\hypertarget{_course_8h_source}{}\label{_course_8h_source}\index{src/h/Course.h@{src/h/Course.h}}
+\mbox{\hyperlink{_course_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PROJETO\_1\_COURSE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PROJETO\_1\_COURSE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_schedule_8h}{Schedule.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_course}{Course}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{string}\ code;}
+\DoxyCodeLine{00013\ \ \ \ \ vector<string>classes;}
+\DoxyCodeLine{00014\ \ \ \ \ vector<int>students;}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_schedule}{Schedule}}*\ sched;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_course}{Course}}(\textcolor{keywordtype}{string}\ cod);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_adc4a2f353187e911ec9d648fbe76e0e8}{setCode}}(\textcolor{keywordtype}{string}\ cod);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_course_a67e1d65b0e960e12e2bf1a2969ae6ab2}{getCode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_a4d9d7059349640257fc4e75d29b1176d}{addClass}}(\textcolor{keywordtype}{string}\&\ c);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_a0e51a2f7137ff1e165a6917ee6577547}{removeClass}}(\textcolor{keywordtype}{string}\&\ c);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_a876a8d889ed276dda809780cad73f469}{addStudent}}(\textcolor{keywordtype}{int}\ student);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_a89c24e2488f0b40584a5be65242cdb44}{removeStudent}}(\textcolor{keywordtype}{int}\ student);}
+\DoxyCodeLine{00025\ \ \ \ \ vector<string>\ \mbox{\hyperlink{class_course_ac649416bca4d4828769a21843997f775}{getClasses}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_course_adc3d203953aca976f307db4b340e3c78}{getStudents}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_schedule}{Schedule}}*\ \mbox{\hyperlink{class_course_a51c72cc50f2d30638015c9b533756c47}{getSchedule}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_course_ac5b71ff759ea93e2d6a35e89ea9f0e0b}{setSchedule}}(\mbox{\hyperlink{class_schedule}{Schedule}}*\ sched);}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
